@@ -2,9 +2,8 @@ const five = require('johnny-five');
 const board = new five.Board();
 
 function* createCount(limit) {
-    for(i=1; i<=limit; i++) {
-        yield i;
-    }
+  for (let count of [...Array(limit)].keys())
+      yield count + 1;
 }
 
 board.on('ready', () => {

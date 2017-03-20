@@ -12,7 +12,8 @@ board.on('ready', () => {
         return temp;
     }
   });
-  temperature.on('data', () => {
-    console.log(temperature.celsius);
-  });
+
+  board.repl.inject({
+      temp: temperature
+    });
 });

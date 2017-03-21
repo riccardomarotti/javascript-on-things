@@ -18,6 +18,7 @@
   "homepage": "https://github.com/riccardomarotti/javascript-on-things#readme",
   "dependencies": {
     "johnny-five": "^0.10.6",
+    "request": "^2.81.0",
     "underscore": "^1.8.3"
   }
 }

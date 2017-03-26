@@ -20,5 +20,8 @@
     "johnny-five": "^0.10.6",
     "request": "^2.81.0",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "rx": "^4.1.0"
   }
 }

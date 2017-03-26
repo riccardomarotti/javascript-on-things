@@ -78,7 +78,11 @@ ready$.subscribe(() => {
 
     timer_end$ = timer$.filter((x) => x.count <= 0);
     timer$.takeUntil(timer_end$).subscribe(
-        (x) => lcd.cursor(0, 0).print(getStringTime(x.count)),
+        (x) => {
+            var displayText = getStringTime(x.count);
+            var pausedText = x.counting ? '       ' : 'PAUSED'
+            lcd.cursor(0, 0).print(`${displayText} ${pausedText}`);
+        },
         (err) => lcd.cursor(0, 0).print(err),
         () => playChime(alertChime, lcd)
     );
